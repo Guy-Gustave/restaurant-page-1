@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(https://images.pexels.com/photos/1907228/pexels-photo-1907228.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+    background-size: cover;
+    margin: 0px;
+}
+
+#header-container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 4.5rem;
+    border-bottom: solid rgb(221, 129, 53);
+}
+
+#home-container {
+    width: 100%;
+}
+
+#reserve-button {
+    width: 25rem;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 25%;
+    right: 25%;
+    margin-top: 4rem;
+    font-size: 32px;
+    outline: none;
+    border-top: none;
+    border-left: 5px solid rgba(255, 255, 255, 0);
+    border-bottom: none;
+    border-right: 5px solid rgb(221, 129, 53);
+    transition: ease-in-out 0.5s;
+    background-color: rgb(255, 255, 255);
+    animation: fadeIn ease 2s;
+}
+
+#reserve-button:hover {
+    transition: ease-in-out 0.5s;
+    background-color: rgb(221, 129, 53);
+    border-left: 5px solid rgb(255, 255, 255);
+}
+
+#rest-name {
+    font-family: "Lato", sans-serif;
+    position: absolute;
+    font-size: 40px;
+    margin: 1rem;
+    font-style: italic;
+    color: white;
+}
+
+#title-flair {
+    color: rgb(221, 129, 53);
+}
+
+.nav-item {
+    font-family: "Lato", sans-serif;
+    position: relative;
+    display: block;
+    font-size: 40px;
+    color: white;
+    float: right;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    cursor: pointer;
+}
+
+li::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(221, 129, 53);
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+}
+
+li:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+#contact-box {
+    background-color: rgba(0, 0, 0, 0.8);
+    position: relative;
+    width: 60rem;
+    height: 20rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5rem;
+    animation: fadeIn ease 2s;
+}
+
+@keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+}
+
+.info {
+    font-size: 28px;
+    margin-left: 4rem;
+    color: rgb(255, 255, 255);
+}
+
+.info-h {
+    font-size: 28px;
+    margin-left: 2rem;
+    color: rgb(255, 255, 255);
+}
+
+#github-mark {
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    right: 5rem;
+    top: 5rem;
+    border-radius: 50%;
+}
