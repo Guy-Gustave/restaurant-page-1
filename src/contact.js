@@ -16,13 +16,12 @@ const contact = () => {
     email.classList.add("info");
     ourAddress.classList.add("info-h");
     address.classList.add("info");
-    githubLink.href = "https://github.com/jthc-dev";
-    githubMark.id = "github-mark";
-    githubMark.src = "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png";
-
-    contactBox.id = "contact-box";
+    githubLink.setAttribute("href", "https://github.com/jthc-dev");
+    githubMark.setAttribute("id", "github-mark");
+    githubMark.setAttribute("src", "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png");
+    contactBox.setAttribute("id", "contact-box");
+    
     content.appendChild(contactBox);
-
     contactBox.appendChild(contactUs);
     contactBox.appendChild(phone);
     contactBox.appendChild(email);

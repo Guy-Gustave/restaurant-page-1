@@ -3,14 +3,17 @@ function menu() {
     content.innerHTML = "";
 
     let menuContainer = document.createElement("div");
-    menuContainer.id = "menu-container";
-    content.appendChild(menuContainer);
-
     let menuHeader = document.createElement("div");
     let menuText = document.createElement("p");
-    document.getElementById("menu-container").appendChild(menuHeader);
+    
+    menuContainer.setAttribute("id", "menu-container");
     menuHeader.id = "menu-header";
+    menuText.id = "menu-text";
+    
+    content.appendChild(menuContainer);
+    menuContainer.appendChild(menuHeader);
     menuHeader.appendChild(menuText);
+
     menuText.textContent = `Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
     Ipsum dolor sit amet consectetur adipiscing elit duis tristique. 
@@ -21,7 +24,7 @@ function menu() {
     tortor at. Nisl suscipit adipiscing bibendum est ultricies. Elementum tempus 
     egestas sed sed risus pretium quam. Scelerisque felis imperdiet proin 
     fermentum leo vel orci porta.`;
-    menuText.id = "menu-text";
+
     for (let i = 0; i < 8; i++) {
         let menuItem = document.createElement("div");
         let itemImage = document.createElement("img");
@@ -30,10 +33,10 @@ function menu() {
 
         menuItem.classList.add("menu-item");
         itemImage.classList.add("item-image");
-        itemImage.src = "https://images.unsplash.com/photo-1568096889942-6eedde686635?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
         itemName.classList.add("item-name");
-        itemName.textContent = "Delicious Noodles - $12"
         itemDesc.classList.add("item-desc");
+        itemImage.setAttribute("src", "https://images.unsplash.com/photo-1568096889942-6eedde686635?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+        itemName.textContent = "Delicious Noodles - $12"
         itemDesc.textContent = "Overly verbose description of menu item"
 
         menuContainer.appendChild(menuItem);
